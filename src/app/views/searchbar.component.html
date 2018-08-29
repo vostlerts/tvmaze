@@ -1,0 +1,5 @@
+<div class="container">
+    <div id="error" *ngIf="error != ''">{{ error }}</div>
+    <input #name_movie type="text" placeholder="enter the name of the movie..." (keyup.enter)="onSearchClick(name_movie.value)">
+    <button (click)="onSearchClick(name_movie.value)">Search</button>
+</div>

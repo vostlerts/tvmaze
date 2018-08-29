@@ -1,0 +1,47 @@
+.container {
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+
+    & > * {
+        display: block;
+        margin: 0 auto;
+        transition: all .3s;
+
+        &:not(:first-child) {
+            margin: 30px auto;
+        }
+    }
+
+    #error {
+        text-align: center;
+        color: #9e4343;
+        font-weight: bold;
+    }
+
+    input {
+        border-radius: 6px;
+        border: 0;
+        padding: 10px;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.5)
+    }
+
+    button {
+        border-radius: 6px;
+        border: 0;
+        padding: 15px 25px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+
+    & > *:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05)
+    }
+}
