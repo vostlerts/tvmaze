@@ -1,6 +1,7 @@
 .container {
     max-width: 500px;
-    min-width: 300px;
+    min-width: 310px;
+    padding: 0 20px;
     margin: 0 auto;
 
     & > * {
@@ -40,7 +41,9 @@
         cursor: pointer;
     }
 
-    & > *:hover {
+    & > *:hover,
+    & > *:focus,
+    & > *:active {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transform: scale(1.05)
     }

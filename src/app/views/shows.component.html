@@ -1,0 +1,31 @@
+<a class="logo" [routerLink]="['/']">TVmaze App</a>
+<search-bar minified="true" value="{{ search_value }}"></search-bar>
+
+<section class="shows-info clearfix">
+    <section class="back_btn">
+        <div class="arrow-btn">
+            <span (click)="onBack()" class="arrow left"></span>
+        </div>
+    </section>
+    <h1>{{ data.name }}</h1>
+    <div class="poster">
+        <div class="img" [ngClass]="{'no_poster': (data.image == null)}">
+            <img *ngIf="data.image != null" src="{{ data.image.original }}">
+        </div>
+    </div>
+    <div class="full_info clearfix">
+        <div class="info">
+            <p><b>Airs on: </b>{{ data.network.name }}</p>
+            <p><b>Status: </b>{{ data.status }}</p>
+            <p><b>Show Type: </b>{{ data.type }}</p>
+            <p><b>Genres: </b>{{ data.genres }}</p>
+            <p><b>Schedule: </b>{{ data.schedule.days }} at {{ data.schedule.time }} ({{ data.runtime }} min)</p>
+        </div>
+        <div class="description" [innerHTML]="data.summary"></div>
+    </div>
+    <h1>Episodes</h1>
+    <div class="episode-list">
+        <span class="text-center" *ngIf="episodes == null">Loading...</span>
+        <episode-list *ngFor="let item of episodes" [data]="item"></episode-list>
+    </div>
+</section>
