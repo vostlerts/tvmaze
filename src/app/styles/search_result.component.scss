@@ -1,0 +1,22 @@
+.logo {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #3c948b;
+    padding: 50px 0 30px;
+    display: block;
+    text-decoration: none;
+}
+
+h1 {
+    padding: 70px 0 0 0;
+    text-align: center;
+}
+
+.shows-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}

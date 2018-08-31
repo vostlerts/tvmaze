@@ -1,0 +1,19 @@
+<section class="container">
+    <h1>Season {{ data[0].season }}:</h1>
+    <br>
+    
+    <table>
+        <thead>
+            <th width="48">#</th>
+            <th width="130">Release Date</th>
+            <th class="left">Name</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td class="center">{{ item.number }}</td>
+                <td class="center">{{ item.airdate }}</td>
+                <td>{{ item.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

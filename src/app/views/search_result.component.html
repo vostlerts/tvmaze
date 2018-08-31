@@ -1,0 +1,7 @@
+<a class="logo" [routerLink]="['/']">TVmaze App</a>
+<search-bar minified="true" value="{{ search_value }}"></search-bar>
+
+<h1>Search results:</h1>
+<section class="shows-list">
+    <shows-item *ngFor="let item of search_list" [data]="item"></shows-item>
+</section>

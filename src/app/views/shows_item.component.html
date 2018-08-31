@@ -1,0 +1,9 @@
+<section class="item" (click)="getFullInfo(data.show.id)">
+    <section class="content">
+        <div class="img" [ngClass]="{'no_poster': (data.show.image == null)}">
+            <img *ngIf="data.show.image != null" src="{{ data.show.image.original }}">
+        </div>
+    </section>
+    <h4>{{ data.show.name }}</h4>
+    <h6>{{ genres }}</h6>
+</section>

@@ -1,0 +1,99 @@
+.logo {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #3c948b;
+    padding: 50px 0 30px;
+    display: block;
+    text-decoration: none;
+}
+
+h1 {
+    padding: 70px 0;
+    text-align: center;
+    font-size: 2em;
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 310px;
+}
+
+.shows-info {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.back_btn {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 310px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.arrow-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 75px;
+
+    .arrow {
+        position: absolute;
+        left: 11px;
+        top: 7px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-top: 3px solid #439e96;
+        border-right: 3px solid #439e96;
+    
+        &.left {
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.poster {
+    width: 250px;
+    height: 350px;
+    background: #ffffff;
+    float: left;
+    flex-wrap: wrap;
+    margin: 20px;
+    box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: all .2s;
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+
+    .img {
+        &.no_poster {
+            background: #ffffff url('/assets/images/no_poster.jpg');
+            height: 100%;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .poster {
+        float: none;
+        margin: 0 auto 70px;
+    }
+} 
+
+.full_info {
+    margin: 20px;
+    flex-wrap: wrap;
+
+    .description {
+        line-height: 1.5;
+    }
+}
